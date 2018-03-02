@@ -1,0 +1,8 @@
+Add new component
+1. ng generate component devices  --module=app
+2. define component routing in app-routing.module.ts e.g { path: 'devices', component: DevicesComponent }
+3. add navigation link in app.component.html
+
+
+Add new module
+ng generate module app-routing --flat --module=app
