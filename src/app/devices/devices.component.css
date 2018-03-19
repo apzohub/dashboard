@@ -1,0 +1,76 @@
+.new-device-fab {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 103;
+    float: left;
+}
+
+mat-icon.fa::before{
+    top: 4px;
+    left: 4px;
+    position: relative;
+}
+
+
+i.fa{
+    position: relative;
+}
+
+.devices-container{
+    z-index: 102;    
+}
+
+.mat-drawer-settings{
+    overflow-x: hidden;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    max-width: 600px;
+    min-width: 400px;
+    padding: 18px;
+    align-items: center;
+  /* justify-content: center; */
+}  
+
+.sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+}
+
+.if-mobile .sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+        `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+}
+
+.devices-list{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+/*     float: left;
+    margin: 0;
+    flex-direction: column;  */
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto;
+}
+
+mat-expansion-panel{
+    float: left;
+    display: block; 
+    margin: 5px;   
+    justify-content: space-around;
+}
+
+.devices-list .mat-expansion-panel-header-title, 
+.devices-list .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.devices-list .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}

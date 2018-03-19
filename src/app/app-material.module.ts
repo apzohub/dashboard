@@ -12,6 +12,7 @@ import {
   MatExpansionModule,
   MatGridListModule,
   MatIconModule,
+  MatIconRegistry,
   MatInputModule,
   MatListModule,
   MatMenuModule,
@@ -32,6 +33,7 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
+  MAT_DIALOG_DEFAULT_OPTIONS
 } from '@angular/material';
 import {CdkTableModule} from '@angular/cdk/table';
 
@@ -70,6 +72,11 @@ import {CdkTableModule} from '@angular/cdk/table';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
+  providers: [MatIconRegistry, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}]
 })
-export class AppMaterialModule { }
+export class AppMaterialModule {
+  public constructor(public matIconRegistry: MatIconRegistry) {
+    matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  }
+}

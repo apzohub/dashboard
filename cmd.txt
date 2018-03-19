@@ -1,3 +1,5 @@
+npm install font-awesome angular-font-awesome
+
 Add new component
 1. ng generate component devices  --module=app
 2. define component routing in app-routing.module.ts e.g { path: 'devices', component: DevicesComponent }
@@ -6,3 +8,6 @@ Add new component
 
 Add new module
 ng generate module app-routing --flat --module=app
+
+data models
+ng generate class data-model
